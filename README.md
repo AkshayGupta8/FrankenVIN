@@ -1,4 +1,4 @@
-## FrankenVIN (super MVP)
+`## FrankenVIN (super MVP)
 
 Mobile-first web mock of a **car passport** for “Frankenstein builds” (engine swap, drivetrain swaps, provenance, and service timeline). No backend/db.
 
@@ -14,10 +14,14 @@ Mobile-first web mock of a **car passport** for “Frankenstein builds” (engin
 ```bash
 cd frankenvin
 npm install
-npm run dev
+sudo npm run dev
 ```
 
-Then open: http://localhost:5173
+Then open: http://localhost/
+
+> Note: Port **80** is a privileged port on macOS/Linux, so running the dev server
+> requires elevated privileges. If you’d rather not run Vite as root, keep Vite on
+> an unprivileged port (e.g. 5174) and forward/proxy port 80 to it.
 
 ### Build
 ```bash

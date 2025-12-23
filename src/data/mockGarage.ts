@@ -56,7 +56,7 @@ export type CommunityPost = {
   time: string;
   text: string;
   carId?: string;
-  likes: number;
+  likes:  number;
   comments: number;
 };
 

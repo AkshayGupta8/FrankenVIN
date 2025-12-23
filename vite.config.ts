@@ -5,7 +5,10 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   server: {
     host: true, // listen on all interfaces (required for mobile/ngrok)
-    port: 5174,
+    // Port 80 is a privileged port on macOS/Linux. You'll typically need:
+    //   sudo npm run dev
+    port: 80,
+    strictPort: true,
     allowedHosts: true, // allow ngrok + any mobile host
   },
 
