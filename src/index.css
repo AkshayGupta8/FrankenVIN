@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 12 12 14;
+    --card: 18 18 22;
+    --muted: 120 120 130;
+    --text: 245 245 250;
+    --accent: 255 74 74;
+    --accent2: 80 200 255;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply bg-[rgb(var(--bg))] text-[rgb(var(--text))] antialiased;
+  }
+}
+
+@layer components {
+  .fv-card {
+    @apply rounded-2xl bg-[rgb(var(--card))] border border-white/10 shadow-lg;
+  }
+
+  .fv-chip {
+    @apply inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/90;
+  }
+
+  .fv-accent {
+    color: rgb(var(--accent));
+  }
+}
